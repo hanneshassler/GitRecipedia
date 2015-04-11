@@ -20,5 +20,5 @@ Maintain a personal ingredient database.
 Exchange recipes with friends or a bigger audience in a standardized way. This can happen peer to peer 
 between friends or using the powerful github tools.
 
-xxx
+
 
