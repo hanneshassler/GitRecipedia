@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="recipes.xsl" type="text/xsl" ?>
+<recipes>
+  <recipe>
+    <name>Kims Lentil Dhal</name>
+    <source>www.taste.com.au/recipes/14107/lentil+dhal</source>
+    <ingredients>
+      <ingredient>
+        <name>red lentils, rinsed well</name>
+        <measure>1.0</measure>
+        <measureUnit>cup</measureUnit>
+        <measure_in_gram>194.0</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>Ingwer</name>
+        <measure>4.3</measure>
+        <measureUnit>cm</measureUnit>
+        <measure_in_gram>32.0</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>bay leave</name>
+        <measure>2.0</measure>
+        <measureUnit>Stk</measureUnit>
+        <measure_in_gram>0.3</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>cinnamon stick</name>
+        <measure>1.0</measure>
+        <measureUnit>Stk</measureUnit>
+        <measure_in_gram>3.0</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>Butter</name>
+        <measure>2.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>56.8</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>onion, finely chopped</name>
+        <measure>1.0</measure>
+        <measureUnit>pcs</measureUnit>
+        <measure_in_gram>114.0</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>garlic, clove, crushed</name>
+        <measure>2.0</measure>
+        <measureUnit>pcs</measureUnit>
+        <measure_in_gram>9.3</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>turmeric</name>
+        <measure>2.0</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>9.1</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>cumin</name>
+        <measure>1.0</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>2.3</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>garam masala</name>
+        <measure>0.5</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>0.6</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>chili flakes</name>
+        <measure>0.5</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>0.6</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>lemon juice</name>
+        <measure>2.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>59.2</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>salt</name>
+        <measure>0.75</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>3.3</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>koriander leaves, chopped</name>
+        <measure>1.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>14.8</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>naan bread</name>
+        <measure>1.0</measure>
+        <measureUnit>Stk</measureUnit>
+        <measure_in_gram>0.0</measure_in_gram>
+      </ingredient>
+    </ingredients>
+    <preparation>Step1: Place Lents, ginger, bay leaves and cinnamon in a large
+saucepan with 3 cups of cold water. Bring to boil, reduce the heat
+to medium and simmer, stirring to prevent sticking for 10-12 
+minutes. Discard spices and set aside.
+
+Step2: Heat the butter in a large frying pan over a medium high
+heat. Add the onion and cook for 3 minutes. Stir in the garlic, 
+turmeric, cumin, garam masala and chili flakes and cook for
+a further minute or until fragrant. Stir in the lemon juice and
+season to taste with salt.
+
+Step3: Add the lentils to the pan and mix well. Cook for a further
+3 minutes, stirring constantly. Remove from the heat. Stir in 
+coriander and serve hot with naan bread or pappadums.</preparation>
+    <potions>4</potions>
+    <portions>4</portions>
+    <cook>Kim Meredith</cook>
+  </recipe>
+  <recipe>
+    <name>Ashleys Dairy Free Lentil Dahl</name>
+    <source>http://dairyfreecooking.about.com/od/soupschilistews/r/lentildahl.htm</source>
+    <preparation>1. In a 3-quart stockpot or other medium-sized soup pot, heat the
+sesame oil over medium heat. Once the oil is hot, add the onion,
+garlic and ginger. Cook stirring often, until the onions are translucent,
+about 6 minutes.
+
+2. Stirring constantly, add the water or broth, lentils, speices and salt.
+Bring to a low boil, then turn down the heat to low, cover and let
+the soup simmer for about 20 minutes, or until the lentils are very 
+tender.
+
+3. Stir in the tomato paste until well combined. Cook several minutes
+more, or until the soup is desired temperature and consitency, 
+adding more water to the dahl if needed. Serve hot with dairy free
+cheesy flatbrad and garnish with a dollop of dairy free soy yoghurt
+if desired.</preparation>
+    <portions>4</portions>
+    <cook>Ashley Adams</cook>
+    <ingredients>
+      <ingredient>
+        <name>sesame oil</name>
+        <measure>1.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>13.6</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>onion, white, finely chopped</name>
+        <measure>1.0</measure>
+        <measureUnit>cup</measureUnit>
+        <measure_in_gram>160.9</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>garlic clove</name>
+        <measure>2.0</measure>
+        <measureUnit>Stk</measureUnit>
+        <measure_in_gram>9.3</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>broth, or water</name>
+        <measure>4.0</measure>
+        <measureUnit>cup</measureUnit>
+        <measure_in_gram>3785.6</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>red lentils, rinsed and picked over</name>
+        <measure>1.0</measure>
+        <measureUnit>cup</measureUnit>
+        <measure_in_gram>194.0</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>cumin</name>
+        <measure>1.0</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>2.3</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>turmeric</name>
+        <measure>1.0</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>2.3</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>cardamon</name>
+        <measure>0.25</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>0.1</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>cinnamon</name>
+        <measure>0.25</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>0.3</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>cayenne pepper</name>
+        <measure>0.25</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>0.1</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>salt, or to taste</name>
+        <measure>1.0</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>5.9</measure_in_gram>
+      </ingredient>
+    </ingredients>
+  </recipe>
+  <recipe>
+    <name>recipe</name>
+    <source />
+    <preparation />
+    <portions>0</portions>
+    <cook />
+    <ingredients>
+      <ingredient>
+        <name>Butter</name>
+        <measure>3.0</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>42.6</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>sugar</name>
+        <measure>1.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>12.6</measure_in_gram>
+      </ingredient>
+    </ingredients>
+  </recipe>
+</recipes>
+
