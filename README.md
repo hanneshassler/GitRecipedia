@@ -21,4 +21,13 @@ Exchange recipes with friends or a bigger audience in a standardized way. This c
 between friends or using the powerful github tools.
 
 
+Level of professional
+
+There are different types of professionals and depending which type you are
+you will want to use this package in your specific way.
+
+You might be an amateur or professional cook who wants to checkout recipes.
+Then you can simply use the database (db directory) and open the file recipes.xml
+with any webbrowser.
+
 
