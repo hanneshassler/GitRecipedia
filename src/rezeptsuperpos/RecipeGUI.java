@@ -105,7 +105,6 @@ public class RecipeGUI extends javax.swing.JFrame {
         recipeSourceTextField = new javax.swing.JTextField();
         ingredientScrollPane2 = new javax.swing.JScrollPane();
         recipeIngredientsTable = new javax.swing.JTable();
-        jLabel11 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         recipePreparationTextArea = new javax.swing.JTextArea();
         jLabel12 = new javax.swing.JLabel();
@@ -419,9 +418,9 @@ public class RecipeGUI extends javax.swing.JFrame {
 
         recipeNameTextField.setText(" ");
 
-        jLabel7.setText("Name");
+        jLabel7.setText("name");
 
-        jLabel8.setText("Quelle");
+        jLabel8.setText("source");
 
         recipeSourceTextField.setText(" ");
 
@@ -457,7 +456,7 @@ public class RecipeGUI extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Menge", "Einheit", "Zutat"
+                "amount", "unit", "ingredient"
             }
         ) {
             Class[] types = new Class [] {
@@ -494,17 +493,15 @@ public class RecipeGUI extends javax.swing.JFrame {
             recipeIngredientsTable.getColumnModel().getColumn(1).setMaxWidth(150);
         }
 
-        jLabel11.setText("Zutaten");
-
         recipePreparationTextArea.setColumns(20);
         recipePreparationTextArea.setRows(5);
         jScrollPane3.setViewportView(recipePreparationTextArea);
 
-        jLabel12.setText("Zubereitung");
+        jLabel12.setText("preparation");
 
         recipePortionTextField.setText("4");
 
-        jLabel13.setText("Portionen");
+        jLabel13.setText("portions");
 
         moveUpButton.setText("move Up");
         moveUpButton.addActionListener(new java.awt.event.ActionListener() {
@@ -654,7 +651,6 @@ public class RecipeGUI extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(jLabel12)
                     .addComponent(moveUpButton)
-                    .addComponent(jLabel11)
                     .addGroup(recipejPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(delIngredientButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(moveDownButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -665,22 +661,25 @@ public class RecipeGUI extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(recipejPanelLayout.createSequentialGroup()
                         .addGroup(recipejPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
-                            .addGroup(recipejPanelLayout.createSequentialGroup()
-                                .addComponent(recipePortionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(4, 4, 4)
-                                .addComponent(jLabel14)
-                                .addGap(4, 4, 4)
-                                .addComponent(cookNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(recipejPanelLayout.createSequentialGroup()
-                                .addComponent(ingredientScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(recipejPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(getInfoButton)
-                                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(ingredientInfoTextField)))
                             .addComponent(recipeSourceTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
-                            .addComponent(recipeNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE))
+                            .addComponent(recipeNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
+                            .addGroup(recipejPanelLayout.createSequentialGroup()
+                                .addGroup(recipejPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(recipejPanelLayout.createSequentialGroup()
+                                        .addComponent(recipePortionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(4, 4, 4)
+                                        .addComponent(jLabel14)
+                                        .addGap(4, 4, 4)
+                                        .addComponent(cookNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(recipejPanelLayout.createSequentialGroup()
+                                        .addComponent(ingredientScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(recipejPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(getInfoButton)
+                                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(ingredientInfoTextField)))
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(632, 632, 632))))
@@ -710,8 +709,7 @@ public class RecipeGUI extends javax.swing.JFrame {
                 .addGap(9, 9, 9)
                 .addGroup(recipejPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(recipejPanelLayout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(29, 29, 29)
                         .addComponent(moveUpButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(moveDownButton)
@@ -726,11 +724,11 @@ public class RecipeGUI extends javax.swing.JFrame {
                         .addComponent(ingredientInfoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(automaticWolframAlphaCheckBox)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(recipejPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Recipe", recipejPanel);
@@ -776,7 +774,7 @@ public class RecipeGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1304,7 +1302,6 @@ public class RecipeGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane ingredientScrollPane2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
