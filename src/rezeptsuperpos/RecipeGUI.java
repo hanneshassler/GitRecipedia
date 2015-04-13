@@ -133,6 +133,7 @@ public class RecipeGUI extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         exitMenuItem = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        infoMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -149,7 +150,7 @@ public class RecipeGUI extends javax.swing.JFrame {
         jLabel2.setText("Unit");
 
         aliasTextArea.setColumns(20);
-        aliasTextArea.setFont(new java.awt.Font("Monospaced", 0, 12));
+        aliasTextArea.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         aliasTextArea.setRows(5);
         aliasTextArea.setText("Jamaica pepper, piment, \nnewspice, Neugewürz, \nNelkenpfeffer, Jamaikapfeffer, \nViergewürz, Allgewürz");
         aliasTextArea.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -484,12 +485,14 @@ public class RecipeGUI extends javax.swing.JFrame {
             }
         });
         ingredientScrollPane2.setViewportView(recipeIngredientsTable);
-        recipeIngredientsTable.getColumnModel().getColumn(0).setMinWidth(80);
-        recipeIngredientsTable.getColumnModel().getColumn(0).setPreferredWidth(10);
-        recipeIngredientsTable.getColumnModel().getColumn(0).setMaxWidth(150);
-        recipeIngredientsTable.getColumnModel().getColumn(1).setMinWidth(80);
-        recipeIngredientsTable.getColumnModel().getColumn(1).setPreferredWidth(10);
-        recipeIngredientsTable.getColumnModel().getColumn(1).setMaxWidth(150);
+        if (recipeIngredientsTable.getColumnModel().getColumnCount() > 0) {
+            recipeIngredientsTable.getColumnModel().getColumn(0).setMinWidth(80);
+            recipeIngredientsTable.getColumnModel().getColumn(0).setPreferredWidth(10);
+            recipeIngredientsTable.getColumnModel().getColumn(0).setMaxWidth(150);
+            recipeIngredientsTable.getColumnModel().getColumn(1).setMinWidth(80);
+            recipeIngredientsTable.getColumnModel().getColumn(1).setPreferredWidth(10);
+            recipeIngredientsTable.getColumnModel().getColumn(1).setMaxWidth(150);
+        }
 
         jLabel11.setText("Zutaten");
 
@@ -589,9 +592,9 @@ public class RecipeGUI extends javax.swing.JFrame {
             .addComponent(recipeCheckButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(recipePrevButton, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
-                    .addComponent(recipeNextButton, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
-                    .addComponent(recipeSearchButton, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE))
+                    .addComponent(recipePrevButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(recipeNextButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(recipeSearchButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(recipeSaveButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -753,6 +756,15 @@ public class RecipeGUI extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("About");
+
+        infoMenuItem.setText("Info");
+        infoMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                infoMenuItemActionPerformed(evt);
+            }
+        });
+        jMenu2.add(infoMenuItem);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -769,7 +781,7 @@ public class RecipeGUI extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 722, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addGap(22, 22, 22))
         );
 
@@ -1138,6 +1150,10 @@ public class RecipeGUI extends javax.swing.JFrame {
        //cellEditor.get
     }//GEN-LAST:event_recipeIngredientsTableMouseClicked
 
+    private void infoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoMenuItemActionPerformed
+        this.ErrorOptionPane.showMessageDialog(this,ExceptionMessage.versionNo);
+    }//GEN-LAST:event_infoMenuItemActionPerformed
+
     private void openWolframInfo(String ingredientName) {
         URI uri=null;
 		try {
@@ -1281,6 +1297,7 @@ public class RecipeGUI extends javax.swing.JFrame {
     private javax.swing.JLabel fatper_ml_Label;
     private javax.swing.JLabel gPer_ml_Label;
     private javax.swing.JButton getInfoButton;
+    private javax.swing.JMenuItem infoMenuItem;
     private javax.swing.JTextField ingredientInfoTextField;
     private javax.swing.JPanel ingredientPanel;
     private javax.swing.JButton ingredientSaveButton;
