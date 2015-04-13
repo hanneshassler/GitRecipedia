@@ -21,13 +21,26 @@ Exchange recipes with friends or a bigger audience in a standardized way. This c
 between friends or using the powerful github tools.
 
 
-Level of professional
+Level of professionalism
 
-There are different types of professionals and depending which type you are
-you will want to use this package in your specific way.
+There are different types of professionals and depending which type you are (or at
+a time choose to be) you will want to use this package in your specific way.
 
 You might be an amateur or professional cook who wants to checkout recipes.
 Then you can simply use the database (db directory) and open the file recipes.xml
-with any webbrowser.
+with any webbrowser without bothering to install the program itself.
+
+You might be a geek cook who likes to work on his recipes, exchange with fellow cooks and
+generally increase your recipe stock. Then you want to install also the program and work with 
+that.
+
+You might even contribute to the program itself when you feel that it deserves new features,
+neccessary or profitable for cooks. Again there are several ways: The simplest is to open an issue
+at githup and someone will have a look at it and (hopefully) integrate it into the program.
+Or you might even decide that you want to contribute to the program itself, when you are
+familiar with Java and the process how it is handled on github.
+
+
+
 
 
