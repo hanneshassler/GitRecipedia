@@ -16,7 +16,7 @@ Merge several recipes for a specific dish to create a new recipe being the avera
 for instance to create the perfect cookie recipe.
 (still in construction phase)
 
-Maintain a personal recipe database for recipes and ingredients.
+Maintain a personal database for recipes and ingredients.
 
 Exchange recipes with friends or a bigger audience in a standardized way. This can happen peer to peer 
 between friends or using the powerful github tools.
