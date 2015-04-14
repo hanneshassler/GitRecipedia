@@ -1210,11 +1210,11 @@ public class RecipeGUI extends javax.swing.JFrame {
             this.nameTextField.setText(ingredient.name);
             this.aliasTextArea.setText(formatAliasText(ingredient.aliasCSV()));
             this.densityTextField.setText(""+ingredient.density);
-            this.calTextField.setText(""+ingredient.calSpec);
-            this.carbTextField.setText(""+ingredient.carbSpec);
-            this.fatTextField.setText(""+ingredient.fatSpec);
-            this.protTextField.setText(""+ingredient.protSpec);
-            this.weightPerPieceTextField.setText(""+ingredient.weightPerPiece);
+            this.calTextField.setText(Mantissa.shorten(ingredient.calSpec,ingredPrecision));
+            this.carbTextField.setText(Mantissa.shorten(ingredient.carbSpec,ingredPrecision));
+            this.fatTextField.setText(Mantissa.shorten(ingredient.fatSpec,ingredPrecision));
+            this.protTextField.setText(Mantissa.shorten(ingredient.protSpec,ingredPrecision));
+            this.weightPerPieceTextField.setText(Mantissa.shorten(ingredient.weightPerPiece,ingredPrecision));
         } else {
             this.nameTextField.setText("allspice");
             this.aliasTextArea.setText("Jamaica pepper, piment, newspice, \n"
