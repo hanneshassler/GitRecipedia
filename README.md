@@ -1,7 +1,8 @@
 # GitRecipedia
 A program and database to maintain, create, scale, convert cooking recipes and ingredients. 
 
-This program is intended to be used by cooks who want do to following:
+GitRecipedia is intended to be used by (geek) cooks for various reasons. Some
+of them are:
 
 Convert a cooking recipe with arbitrary units to units of their choice. For instance
 converting from ounces, cups and table spoons to grams and millilitres.
@@ -11,7 +12,8 @@ Convert an x-person recipe to an y-person recipe.
 Check out how much calories, proteins, carbohydrates and fat are included in a specific
 recipe.
 
-Merge several recipes for a specific dish to create a new recipe being the average of them.
+Merge several recipes for a specific dish to create a new recipe being the average of them,
+for instance to create the perfect cookie recipe.
 
 Maintain a personal recipe database.
 
@@ -27,18 +29,20 @@ There are different types of professionals and depending which type you are (or 
 a time choose to be) you will want to use this package in your specific way.
 
 You might be an amateur or professional cook who wants to checkout recipes.
-Then you can simply use the database (db directory) and open the file recipes.xml
-with any webbrowser without bothering to install the program itself.
+Then you might simply use the database (db directory) and open the file recipes.xml
+with any webbrowser without bothering to run GitRecipedia itself.
 
 You might be a geek cook who likes to work on his recipes, exchange with fellow cooks and
-generally increase your recipe stock. Then you want to install also the program and work with 
-that.
+generally increase your recipe stock. Then GitRecipedia will come handy.
 
-You might even contribute to the program itself when you feel that it deserves new features,
-neccessary or profitable for cooks. Again there are several ways: The simplest is to open an issue
-at githup and someone will have a look at it and (hopefully) integrate it into the program.
-Or you might even decide that you want to contribute to the program itself, when you are
-familiar with Java and the process how it is handled on github.
+You might even consider contributing to the program itself when you find bugs or
+feel that it deserves new features, neccessary or profitable for cooks. 
+Again there are several ways: The simplest is to open an issue
+at githup and someone (probably me) will have a look at it and (hopefully) integrate it into the program.
+Or you might even decide that you want to write this piece of code yourself and make a pull request on github
+so I might integrate it into the master version. 
+
+
 
 
 
