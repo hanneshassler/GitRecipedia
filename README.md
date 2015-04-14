@@ -1,5 +1,5 @@
 # GitRecipedia
-A program and database to maintain, create, scale, convert cooking recipes and ingredients. 
+is a program and database to maintain, create, scale, convert cooking recipes and ingredients. 
 
 GitRecipedia is intended to be used by (geek) cooks for various reasons. Some
 of them are:
