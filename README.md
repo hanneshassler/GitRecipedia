@@ -14,6 +14,7 @@ recipe.
 
 Merge several recipes for a specific dish to create a new recipe being the average of them,
 for instance to create the perfect cookie recipe.
+(still in construction phase)
 
 Maintain a personal recipe database.
 
