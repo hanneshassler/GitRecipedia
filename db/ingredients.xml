@@ -7,10 +7,11 @@ newspice, Neugewürz, Nelkenpfeffer,
 Jamaikapfeffer,Viergewürz,
 Allgewürz</alias>
     <density>0.42</density>
-    <calSpec>2.415248915553237</calSpec>
-    <carbSpec>0.08</carbSpec>
-    <fatSpec>0.5</fatSpec>
-    <protSpec>0.058</protSpec>
+    <calSpec>2.4152489155</calSpec>
+    <carbSpec>0.</carbSpec>
+    <fatSpec>0.</fatSpec>
+    <protSpec>0.</protSpec>
+    <weightPerPiece>0.</weightPerPiece>
   </ingredient>
   <ingredient>
     <name>fenugreek</name>
@@ -86,15 +87,6 @@ Allgewürz</alias>
     <protSpec>0.0</protSpec>
   </ingredient>
   <ingredient>
-    <name>cinnamon stick</name>
-    <alias />
-    <density>2.0</density>
-    <calSpec>0.0</calSpec>
-    <carbSpec>0.0</carbSpec>
-    <fatSpec>0.0</fatSpec>
-    <protSpec>0.0</protSpec>
-  </ingredient>
-  <ingredient>
     <name>Zimtstange</name>
     <alias>cinnamon stick</alias>
     <density>1.0</density>
@@ -114,7 +106,8 @@ Allgewürz</alias>
   </ingredient>
   <ingredient>
     <name>garlic</name>
-    <alias>Knoblauch, garlic clove, Koblauchzehe</alias>
+    <alias>Knoblauch, garlic clove,
+Koblauchzehe</alias>
     <density>0.57</density>
     <calSpec>0.0</calSpec>
     <fatSpec>0.0</fatSpec>

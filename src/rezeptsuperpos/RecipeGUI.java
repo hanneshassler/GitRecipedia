@@ -46,6 +46,7 @@ public class RecipeGUI extends javax.swing.JFrame {
     public IngredientArchive ingredientArchive = new IngredientArchive();
     public RecipeArchive recipeArchive = new RecipeArchive();
     Convert convert = new Convert();
+    public static int ingredPrecision=4;
     
 	
     public RecipeGUI() {
@@ -266,10 +267,10 @@ public class RecipeGUI extends javax.swing.JFrame {
                 .addComponent(densityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(gPer_ml_Label)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(weightPerPieceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(weightPerPieceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16)
                 .addGap(85, 85, 85))
@@ -803,10 +804,10 @@ public class RecipeGUI extends javax.swing.JFrame {
             ingredientElement.addContent(createElement("name",this.nameTextField.getText().trim()));
             ingredientElement.addContent(createElement("alias",this.aliasTextArea.getText()));
             ingredientElement.addContent(createElement("density",this.densityTextField.getText()));
-            ingredientElement.addContent(createElement("calSpec",this.calTextField.getText()));
-            ingredientElement.addContent(createElement("carbSpec",this.carbTextField.getText()));
-            ingredientElement.addContent(createElement("fatSpec",this.fatTextField.getText()));
-            ingredientElement.addContent(createElement("protSpec",this.protTextField.getText()));               
+            ingredientElement.addContent(createElement("calSpec",Mantissa.shorten(this.calTextField.getText(),ingredPrecision)));
+            ingredientElement.addContent(createElement("carbSpec",Mantissa.shorten(this.carbTextField.getText(),ingredPrecision)));
+            ingredientElement.addContent(createElement("fatSpec",Mantissa.shorten(this.fatTextField.getText(),ingredPrecision)));
+            ingredientElement.addContent(createElement("protSpec",Mantissa.shorten(this.protTextField.getText(),ingredPrecision)));               
             try {
 				ingredientArchive.insertIngredient(ingredientElement);
 				curIngElem=ingredientArchive.getCurrentElement();
@@ -820,11 +821,11 @@ public class RecipeGUI extends javax.swing.JFrame {
     	curIngElem.getChild("name").setText(this.nameTextField.getText().trim());
     	MyElement.setChild(curIngElem, "alias", this.aliasTextArea.getText());    	
     	MyElement.setChild(curIngElem,"density",this.densityTextField.getText());
-    	MyElement.setChild(curIngElem,"calSpec",calTextField.getText());
-    	MyElement.setChild(curIngElem,"fatSpec",fatTextField.getText());
-    	MyElement.setChild(curIngElem,"protSpec",protTextField.getText());
-    	MyElement.setChild(curIngElem,"carbSpec",carbTextField.getText());  
-        MyElement.setChild(curIngElem,"weightPerPiece",this.weightPerPieceTextField.getText());        
+    	MyElement.setChild(curIngElem,"calSpec",Mantissa.shorten(calTextField.getText(),ingredPrecision));
+    	MyElement.setChild(curIngElem,"fatSpec",Mantissa.shorten(fatTextField.getText(),ingredPrecision));
+    	MyElement.setChild(curIngElem,"protSpec",Mantissa.shorten(protTextField.getText(),ingredPrecision));
+    	MyElement.setChild(curIngElem,"carbSpec",Mantissa.shorten(carbTextField.getText(),ingredPrecision));  
+        MyElement.setChild(curIngElem,"weightPerPiece",Mantissa.shorten(this.weightPerPieceTextField.getText(),ingredPrecision));        
     	try {
 			ingredientArchive.saveIngredients();
 		} catch (FileNotFoundException e) {			
