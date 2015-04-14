@@ -2,7 +2,7 @@
 is a program and database to maintain, create, scale, convert cooking recipes and ingredients. 
 
 GitRecipedia is intended to be used by (geek) cooks for various reasons. Some
-of them are:
+of their requirements are:
 
 Convert a cooking recipe with arbitrary units to units of their choice. For instance
 converting from ounces, cups and table spoons to grams and millilitres.
@@ -16,9 +16,7 @@ Merge several recipes for a specific dish to create a new recipe being the avera
 for instance to create the perfect cookie recipe.
 (still in construction phase)
 
-Maintain a personal recipe database.
-
-Maintain a personal ingredient database.
+Maintain a personal recipe database for recipes and ingredients.
 
 Exchange recipes with friends or a bigger audience in a standardized way. This can happen peer to peer 
 between friends or using the powerful github tools.
