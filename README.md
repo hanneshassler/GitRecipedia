@@ -42,7 +42,9 @@ at githup and someone (probably me) will have a look at it and (hopefully) integ
 Or you might even decide that you want to write this piece of code yourself and make a pull request on github
 so I might integrate it into the master version. 
 
-
+It is also my hope that such a tool brings together cooks to collaborate
+on recipes, and possibly in this process new recipes are created (helped by the
+merging feature of GitRecipedia) 
 
 
 
