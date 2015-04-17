@@ -97,14 +97,7 @@ public class IngredientArchive extends GenericArchive{
             this.document.getRootElement().addContent(element);
         currElementOfDocument=0;
     }
-    
-    /*
-    public void changeCurrentIngredient() {
-        Element currIng =documentArr.get(this.currElementOfDocument);
-        this.document.getRootElement().removeChildren("ingredient"); 
-        xxx
-    }*/
-    
+            
     public int size() {
         return this.documentArr.size();
     }

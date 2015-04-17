@@ -2,10 +2,8 @@
 <ingredients>
   <ingredient>
     <name>allspice</name>
-    <alias>Jamaica pepper, piment,
-newspice, Neugewürz,Nelkenpfeffer,
-Jamaikapfeffer, Viergewürz,
-Allgewürz</alias>
+    <alias>Jamaica pepper, piment, newspice, Neugewürz, Nelkenpfeffer, 
+Jamaikapfeffer, Viergewürz, Allgewürz</alias>
     <density>0.42</density>
     <calSpec>0.0</calSpec>
     <carbSpec>0.0</carbSpec>
