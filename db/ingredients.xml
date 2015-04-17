@@ -13,5 +13,16 @@ Allgewürz</alias>
     <protSpec>0.0</protSpec>
     <weightPerPiece>0.0</weightPerPiece>
   </ingredient>
+  <ingredient>
+    <name>pepper</name>
+    <measure_in_gram>0.0</measure_in_gram>
+    <alias>Pfeffer</alias>
+    <density>0.43</density>
+    <calSpec>5.0</calSpec>
+    <fatSpec>1.0</fatSpec>
+    <protSpec>0.197</protSpec>
+    <carbSpec>0.136</carbSpec>
+    <weightPerPiece>2.0</weightPerPiece>
+  </ingredient>
 </ingredients>
 
