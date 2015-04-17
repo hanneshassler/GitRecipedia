@@ -811,14 +811,13 @@ public class RecipeGUI extends javax.swing.JFrame {
             try {
 				ingredientArchive.insertIngredient(ingredientElement);
 				curIngElem=ingredientArchive.getCurrentElement();
-			} catch (FileNotFoundException e) {				
-				e.printStackTrace();
-			} catch (UnsupportedEncodingException e) {				
-				e.printStackTrace();
-			}
-        }      
-        this.repaint();
-    	curIngElem.getChild("name").setText(this.nameTextField.getText().trim());
+			} catch (FileNotFoundException|UnsupportedEncodingException e) {				
+				e.printStackTrace();			
+                        }
+        } else {      
+            this.repaint();
+            curIngElem.getChild("name").setText(this.nameTextField.getText().trim());
+        }
     	MyElement.setChild(curIngElem, "alias", this.aliasTextArea.getText());    	
     	MyElement.setChild(curIngElem,"density",this.densityTextField.getText());
     	MyElement.setChild(curIngElem,"calSpec",Mantissa.shorten(calTextField.getText(),ingredPrecision));
@@ -828,11 +827,9 @@ public class RecipeGUI extends javax.swing.JFrame {
         MyElement.setChild(curIngElem,"weightPerPiece",Mantissa.shorten(this.weightPerPieceTextField.getText(),ingredPrecision));        
     	try {
 			ingredientArchive.saveIngredients();
-		} catch (FileNotFoundException e) {			
+		} catch (FileNotFoundException|UnsupportedEncodingException e) {			
 			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {			
-			e.printStackTrace();
-		}
+		} 
         try {
             switch2Unit(currentUnitName);
         }   catch (Exception ex) {
