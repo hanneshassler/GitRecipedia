@@ -42,11 +42,9 @@ public class IngredientArchive extends GenericArchive{
             	document.addContent(new Element("ingredients"));
             	try {
 					saveIngredients();
-				} catch (FileNotFoundException e) {					
+				} catch (FileNotFoundException|UnsupportedEncodingException e) {					
 					e.printStackTrace();
-				} catch (UnsupportedEncodingException e) {					
-					e.printStackTrace();
-				}
+				} 
             }
             for (Element ingredient: document.getRootElement().getChildren())
                 documentArr.add(ingredient);
@@ -99,6 +97,13 @@ public class IngredientArchive extends GenericArchive{
             this.document.getRootElement().addContent(element);
         currElementOfDocument=0;
     }
+    
+    /*
+    public void changeCurrentIngredient() {
+        Element currIng =documentArr.get(this.currElementOfDocument);
+        this.document.getRootElement().removeChildren("ingredient"); 
+        xxx
+    }*/
     
     public int size() {
         return this.documentArr.size();
