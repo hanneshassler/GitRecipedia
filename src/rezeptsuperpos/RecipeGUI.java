@@ -85,13 +85,13 @@ public class RecipeGUI extends javax.swing.JFrame {
         carb_per_ml_Label = new javax.swing.JLabel();
         prot_per_ml_Label = new javax.swing.JLabel();
         openWolframAlphaButton = new javax.swing.JButton();
-        densityWeightPanel = new javax.swing.JPanel();
-        densityTextField = new javax.swing.JTextField();
         weightPerPieceTextField = new javax.swing.JTextField();
-        gPer_ml_Label = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        densityTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
+        gPer_ml_Label = new javax.swing.JLabel();
+        densityWeightPanel = new javax.swing.JPanel();
         ButtonPanel = new javax.swing.JPanel();
         volumeUnitComboBox = new javax.swing.JComboBox();
         prevButton = new javax.swing.JButton();
@@ -197,46 +197,77 @@ public class RecipeGUI extends javax.swing.JFrame {
             }
         });
 
+        weightPerPieceTextField.setText("0.0");
+        weightPerPieceTextField.setToolTipText("enter if applicable");
+
+        jLabel15.setText("Weight per piece/serving size");
+        jLabel15.setToolTipText("if applicable");
+
+        densityTextField.setText("0.42");
+
+        jLabel3.setText("Density");
+
+        jLabel16.setText("g");
+
+        gPer_ml_Label.setText("g/ml");
+
         javax.swing.GroupLayout EnergyFatPanelLayout = new javax.swing.GroupLayout(EnergyFatPanel);
         EnergyFatPanel.setLayout(EnergyFatPanelLayout);
         EnergyFatPanelLayout.setHorizontalGroup(
             EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EnergyFatPanelLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(EnergyFatPanelLayout.createSequentialGroup()
-                        .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(protTextField)
-                            .addComponent(fatTextField)
-                            .addComponent(carbTextField)
-                            .addComponent(calTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(prot_per_ml_Label)
-                            .addComponent(fatper_ml_Label)
-                            .addComponent(calper_ml_Label)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(openWolframAlphaButton))
+                    .addGroup(EnergyFatPanelLayout.createSequentialGroup()
+                        .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(EnergyFatPanelLayout.createSequentialGroup()
+                                .addGap(166, 166, 166)
+                                .addComponent(jLabel4))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EnergyFatPanelLayout.createSequentialGroup()
-                                .addComponent(carb_per_ml_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(11, 11, 11))))
-                    .addGroup(EnergyFatPanelLayout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(openWolframAlphaButton)))
-                .addContainerGap(99, Short.MAX_VALUE))
+                                .addContainerGap()
+                                .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(densityTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
+                            .addComponent(weightPerPieceTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(protTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(carbTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(calTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(fatTextField, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addGap(4, 4, 4)
+                .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(gPer_ml_Label)
+                    .addComponent(fatper_ml_Label)
+                    .addComponent(calper_ml_Label)
+                    .addComponent(carb_per_ml_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prot_per_ml_Label)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         EnergyFatPanelLayout.setVerticalGroup(
             EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EnergyFatPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(densityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(gPer_ml_Label))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(weightPerPieceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel16))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(calTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(calper_ml_Label)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabel4)
+                    .addComponent(calper_ml_Label))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(carbTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -252,53 +283,20 @@ public class RecipeGUI extends javax.swing.JFrame {
                     .addComponent(protTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(prot_per_ml_Label)
                     .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(openWolframAlphaButton)
-                .addContainerGap())
+                .addContainerGap(20, Short.MAX_VALUE))
         );
-
-        densityTextField.setText("0.42");
-
-        weightPerPieceTextField.setText("0.0");
-        weightPerPieceTextField.setToolTipText("enter if applicable");
-
-        gPer_ml_Label.setText("g/ml");
-
-        jLabel15.setText("weight per piece");
-        jLabel15.setToolTipText("if applicable");
-
-        jLabel3.setText("Density");
-
-        jLabel16.setText("g");
 
         javax.swing.GroupLayout densityWeightPanelLayout = new javax.swing.GroupLayout(densityWeightPanel);
         densityWeightPanel.setLayout(densityWeightPanelLayout);
         densityWeightPanelLayout.setHorizontalGroup(
             densityWeightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(densityWeightPanelLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(densityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(gPer_ml_Label)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
-                .addComponent(jLabel15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(weightPerPieceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel16)
-                .addGap(85, 85, 85))
+            .addGap(0, 586, Short.MAX_VALUE)
         );
         densityWeightPanelLayout.setVerticalGroup(
             densityWeightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(densityWeightPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(densityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(weightPerPieceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(gPer_ml_Label)
-                .addComponent(jLabel15)
-                .addComponent(jLabel3)
-                .addComponent(jLabel16))
+            .addGap(0, 17, Short.MAX_VALUE)
         );
 
         volumeUnitComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ml", "g", "dag", "kg", "dl", "l", "t", "T", "floz", "oz", "cup", "pt", "qt", "gal", "lb" }));
@@ -368,7 +366,7 @@ public class RecipeGUI extends javax.swing.JFrame {
                 .addComponent(ingredientSaveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ButtonPanelLayout.setVerticalGroup(
             ButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -426,9 +424,9 @@ public class RecipeGUI extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(densityWeightPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(EnergyFatPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(340, Short.MAX_VALUE))
+                .addContainerGap(301, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Ingredient", ingredientPanel);
