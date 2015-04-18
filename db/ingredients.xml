@@ -87,21 +87,13 @@ Allgewürz</alias>
   </ingredient>
   <ingredient>
     <name>cinnamon stick</name>
-    <alias />
+    <alias>Zimtstange</alias>
     <density>2.0</density>
-    <calSpec>0.0</calSpec>
-    <carbSpec>0.0</carbSpec>
-    <fatSpec>0.0</fatSpec>
-    <protSpec>0.0</protSpec>
-  </ingredient>
-  <ingredient>
-    <name>Zimtstange</name>
-    <alias>cinnamon stick</alias>
-    <density>1.0</density>
-    <calSpec>0.0</calSpec>
-    <carbSpec>0.0</carbSpec>
-    <fatSpec>0.0</fatSpec>
-    <protSpec>0.0</protSpec>
+    <calSpec>2.0</calSpec>
+    <carbSpec>0.01</carbSpec>
+    <fatSpec>0.8</fatSpec>
+    <protSpec>0.004</protSpec>
+    <weightPerPiece>8.0</weightPerPiece>
   </ingredient>
   <ingredient>
     <name>Lorbeerblatt</name>
