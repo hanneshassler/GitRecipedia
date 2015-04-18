@@ -7,10 +7,11 @@ newspice, Neugewürz, Nelkenpfeffer,
 Jamaikapfeffer,Viergewürz,
 Allgewürz</alias>
     <density>0.42</density>
-    <calSpec>2.415248915553237</calSpec>
+    <calSpec>2.415</calSpec>
     <carbSpec>0.08</carbSpec>
     <fatSpec>0.5</fatSpec>
     <protSpec>0.058</protSpec>
+    <weightPerPiece>2.0</weightPerPiece>
   </ingredient>
   <ingredient>
     <name>fenugreek</name>
