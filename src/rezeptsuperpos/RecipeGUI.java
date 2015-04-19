@@ -47,6 +47,7 @@ public class RecipeGUI extends javax.swing.JFrame {
     public RecipeArchive recipeArchive = new RecipeArchive();
     Convert convert = new Convert();
     public static int ingredPrecision=4;
+    public static int aliasRightmostPos=50;
     
 	
     public RecipeGUI() {
@@ -274,15 +275,17 @@ public class RecipeGUI extends javax.swing.JFrame {
                     .addComponent(fatper_ml_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fatTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(carb_per_ml_Label)
-                    .addComponent(jLabel5))
+                .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(fatTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(carb_per_ml_Label)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(protTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(prot_per_ml_Label)
-                    .addComponent(jLabel10))
+                    .addGroup(EnergyFatPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(protTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel10)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(openWolframAlphaButton)
                 .addContainerGap(20, Short.MAX_VALUE))
@@ -867,7 +870,7 @@ public class RecipeGUI extends javax.swing.JFrame {
             String currChar=unformattedText.substring(strIdx, strIdx+1);
             retVal.append(currChar);
             posCount++;
-            if (currChar.equalsIgnoreCase(",") && posCount>20) {
+            if (currChar.equalsIgnoreCase(",") && posCount>aliasRightmostPos) {
                 retVal.append("\n");
                 posCount=0;
             }            
