@@ -514,6 +514,7 @@ public class RecipeGUI extends javax.swing.JFrame {
         }
 
         recipePreparationTextArea.setColumns(20);
+        recipePreparationTextArea.setFont(new java.awt.Font("URW Palladio L", 3, 15)); // NOI18N
         recipePreparationTextArea.setRows(5);
         jScrollPane3.setViewportView(recipePreparationTextArea);
 
@@ -1153,13 +1154,14 @@ public class RecipeGUI extends javax.swing.JFrame {
 
     private void recipeIngredientsTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recipeIngredientsTableMouseClicked
        
-       System.out.println("Table mouse clicked");
-        //DefaultTableModel dtm = (DefaultTableModel) recipeIngredientsTable.getModel();
-       /*
+       //System.out.println("Table mouse clicked");
+       DefaultTableModel dtm = (DefaultTableModel) recipeIngredientsTable.getModel();
+       
        String currValue=dtm.getValueAt(recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn()).toString();
-       dtm.setValueAt("", recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn());
-       dtm.setValueAt(currValue, recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn());
-       */
+       //dtm.setValueAt("", recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn());
+       //dtm.setValueAt(currValue, recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn());
+       //System.out.println(currValue);
+       ingredientInfoTextField.setText(currValue);
        //recipeIngredientsTable.selectAll();
        //TableCellEditor cellEditor = recipeIngredientsTable.getCellEditor(recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn());
        //cellEditor.get
