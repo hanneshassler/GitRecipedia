@@ -21,6 +21,9 @@ Maintain a personal database for recipes and ingredients.
 Exchange recipes with friends or a bigger audience in a standardized way. This can happen peer to peer 
 between friends or using the powerful github tools.
 
+Currently (that is April 2015) GitRecipedia is still a work in progress. Check out the issue list;
+some of the described features are still simply on that list that wait to be implemented.
+
 
 Level of professionalism
 
