@@ -1218,6 +1218,10 @@ public class RecipeGUI extends javax.swing.JFrame {
         DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
         System.out.println(root.getPath());
+        
+        root.setUserObject("Cookbook");
+        ((DefaultTreeModel) recipejTree.getModel()).nodeChanged(root);
+        
         //model.insertNodeInto(new DefaultMutableTreeNode("another_child"), root, root.getChildCount());
     }//GEN-LAST:event_recipejTreeTreeExpanded
 
