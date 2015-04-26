@@ -115,91 +115,78 @@ coriander and serve hot with naan bread or pappadums.</preparation>
     </ingredients>
   </recipe>
   <recipe>
-    <name>Ashleys Dairy Free Lentil Dahl</name>
-    <source>http://dairyfreecooking.about.com/od/soupschilistews/r/lentildahl.htm</source>
-    <preparation>1. In a 3-quart stockpot or other medium-sized soup pot, heat the
-sesame oil over medium heat. Once the oil is hot, add the onion,
-garlic and ginger. Cook stirring often, until the onions are translucent,
-about 6 minutes.
+    <name>Kartoffel-Kohlrabisalat</name>
+    <source>selfmade</source>
+    <preparation>1. Put the potatoes to cook (preferrably steaming)
 
-2. Stirring constantly, add the water or broth, lentils, speices and salt.
-Bring to a low boil, then turn down the heat to low, cover and let
-the soup simmer for about 20 minutes, or until the lentils are very 
-tender.
+2. Shred kohlrabi into flakes and season with soy sauce,
+fish sauce, sesame oil and freshly ground mustard seeds.
 
-3. Stir in the tomato paste until well combined. Cook several minutes
-more, or until the soup is desired temperature and consitency, 
-adding more water to the dahl if needed. Serve hot with dairy free
-cheesy flatbrad and garnish with a dollop of dairy free soy yoghurt
-if desired.</preparation>
-    <portions>4</portions>
-    <cook>Ashley Adams</cook>
+3. When potatoes are finished, peel them and cut into slices.
+Mix potato slices with kohlrabi salad. Adapt seasoning with
+salt, butter and (Styrian) pumpkin oil.</preparation>
+    <portions>2</portions>
+    <cook>Hannes Hassler</cook>
     <ingredients>
       <ingredient>
+        <name>potato</name>
+        <measure>5.0</measure>
+        <measureUnit>stk</measureUnit>
+        <measure_in_gram>865.0</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>Kohlrabi</name>
+        <measure>1.0</measure>
+        <measureUnit>stk</measureUnit>
+        <measure_in_gram>135.0</measure_in_gram>
+      </ingredient>
+      <ingredient>
         <name>sesame oil</name>
-        <measure>1.0</measure>
-        <measureUnit>T</measureUnit>
-        <measure_in_gram>13.6</measure_in_gram>
-      </ingredient>
-      <ingredient>
-        <name>onion, white, finely chopped</name>
-        <measure>1.0</measure>
-        <measureUnit>cup</measureUnit>
-        <measure_in_gram>160.9</measure_in_gram>
-      </ingredient>
-      <ingredient>
-        <name>garlic clove</name>
         <measure>2.0</measure>
-        <measureUnit>Stk</measureUnit>
-        <measure_in_gram>9.3</measure_in_gram>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>27.2</measure_in_gram>
       </ingredient>
       <ingredient>
-        <name>broth, or water</name>
-        <measure>4.0</measure>
-        <measureUnit>cup</measureUnit>
-        <measure_in_gram>946.4</measure_in_gram>
+        <name>soy sauce</name>
+        <measure>2.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>35.5</measure_in_gram>
       </ingredient>
       <ingredient>
-        <name>red lentils, rinsed and picked over</name>
-        <measure>1.0</measure>
-        <measureUnit>cup</measureUnit>
-        <measure_in_gram>194.0</measure_in_gram>
-      </ingredient>
-      <ingredient>
-        <name>cumin</name>
-        <measure>1.0</measure>
-        <measureUnit>t</measureUnit>
-        <measure_in_gram>2.3</measure_in_gram>
-      </ingredient>
-      <ingredient>
-        <name>turmeric</name>
-        <measure>1.0</measure>
-        <measureUnit>t</measureUnit>
-        <measure_in_gram>2.3</measure_in_gram>
-      </ingredient>
-      <ingredient>
-        <name>cardamon</name>
-        <measure>0.25</measure>
-        <measureUnit>t</measureUnit>
-        <measure_in_gram>0.5</measure_in_gram>
-      </ingredient>
-      <ingredient>
-        <name>cinnamon</name>
-        <measure>0.25</measure>
-        <measureUnit>t</measureUnit>
-        <measure_in_gram>1.2</measure_in_gram>
-      </ingredient>
-      <ingredient>
-        <name>cayenne pepper</name>
-        <measure>0.25</measure>
-        <measureUnit>t</measureUnit>
-        <measure_in_gram>0.5</measure_in_gram>
-      </ingredient>
-      <ingredient>
-        <name>salt, or to taste</name>
+        <name>fish sauce</name>
         <measure>1.0</measure>
         <measureUnit>t</measureUnit>
         <measure_in_gram>5.9</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>mustard seed</name>
+        <measure>2.0</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>9.9</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>salt</name>
+        <measure>1.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>17.7</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>butter</name>
+        <measure>1.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>14.2</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>apple vinegar</name>
+        <measure>1.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>16.3</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>pumpkin oil</name>
+        <measure>3.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>44.4</measure_in_gram>
       </ingredient>
     </ingredients>
   </recipe>
@@ -313,6 +300,11 @@ basmati rice and greens.</preparation>
     <preparation />
     <portions>0</portions>
     <cook />
+  </recipe>
+  <recipe>
+    <name>recipe</name>
+    <source />
+    <ingredients />
   </recipe>
 </recipes>
 

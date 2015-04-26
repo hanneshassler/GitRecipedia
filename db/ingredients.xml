@@ -156,6 +156,7 @@ Jamaikapfeffer,Viergewürz, Allgewürz</alias>
     <fatSpec>0.0</fatSpec>
     <protSpec>0.0</protSpec>
     <carbSpec>0.0</carbSpec>
+    <weightPerPiece>0.0</weightPerPiece>
   </ingredient>
   <ingredient>
     <name>cayenne pepper</name>
@@ -254,6 +255,66 @@ Jamaikapfeffer,Viergewürz, Allgewürz</alias>
     <name>tomatoes</name>
     <density>1.0</density>
     <weightPerPiece>58.0</weightPerPiece>
+    <alias>tomato, Tomate, Tomaten, Paradeiser</alias>
+    <calSpec>0.0</calSpec>
+    <fatSpec>0.0</fatSpec>
+    <protSpec>0.0</protSpec>
+    <carbSpec>0.0</carbSpec>
+  </ingredient>
+  <ingredient>
+    <name>Kohlrabi</name>
+    <density>0.57</density>
+    <weightPerPiece>135</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>potato</name>
+    <density>1.0</density>
+    <weightPerPiece>173.0</weightPerPiece>
+    <alias>Kartoffel, Erdaepfel</alias>
+    <calSpec>0.0</calSpec>
+    <fatSpec>0.0</fatSpec>
+    <protSpec>0.0</protSpec>
+    <carbSpec>0.0</carbSpec>
+  </ingredient>
+  <ingredient>
+    <name>sesame oil</name>
+    <density>0.92</density>
+    <weightPerPiece>14.0</weightPerPiece>
+    <alias>Sesamöl</alias>
+    <calSpec>0.0</calSpec>
+    <fatSpec>0.0</fatSpec>
+    <protSpec>0.0</protSpec>
+    <carbSpec>0.0</carbSpec>
+  </ingredient>
+  <ingredient>
+    <name>soy sauce</name>
+    <density>1.2</density>
+    <weightPerPiece>36.0</weightPerPiece>
+    <alias>Sojasauce</alias>
+    <calSpec>0.0</calSpec>
+    <fatSpec>0.0</fatSpec>
+    <protSpec>0.0</protSpec>
+    <carbSpec>0.0</carbSpec>
+  </ingredient>
+  <ingredient>
+    <name>fish sauce</name>
+    <density>1.2</density>
+    <weightPerPiece>18</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>mustard seed</name>
+    <density>1.0</density>
+    <weightPerPiece>0</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>apple vinegar</name>
+    <density>1.1</density>
+    <weightPerPiece>283</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>pumpkin oil</name>
+    <density>1.0</density>
+    <weightPerPiece>85</weightPerPiece>
   </ingredient>
 </ingredients>
 
