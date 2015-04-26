@@ -242,16 +242,6 @@ Jamaikapfeffer,Viergewürz, Allgewürz</alias>
     <carbSpec>0.0</carbSpec>
   </ingredient>
   <ingredient>
-    <name>chilie</name>
-    <density>1.0</density>
-    <weightPerPiece>0.0</weightPerPiece>
-  </ingredient>
-  <ingredient>
-    <name>chillie</name>
-    <density>1.0</density>
-    <weightPerPiece>0.0</weightPerPiece>
-  </ingredient>
-  <ingredient>
     <name>tomatoes</name>
     <density>1.0</density>
     <weightPerPiece>58.0</weightPerPiece>

@@ -766,6 +766,11 @@ public class RecipeGUI extends javax.swing.JFrame {
                 recipejTreeTreeExpanded(evt);
             }
         });
+        recipejTree.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                recipejTreeMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(recipejTree);
         //recipejTree.set
 
@@ -1224,6 +1229,15 @@ public class RecipeGUI extends javax.swing.JFrame {
         
         //model.insertNodeInto(new DefaultMutableTreeNode("another_child"), root, root.getChildCount());
     }//GEN-LAST:event_recipejTreeTreeExpanded
+
+    private void recipejTreeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recipejTreeMouseClicked
+       
+        System.out.println("mouse clicked; Button="+evt.getButton()+"component="+evt.getComponent());
+       if (evt.getButton()==3) {
+           System.out.println("right Click");
+       }
+       
+    }//GEN-LAST:event_recipejTreeMouseClicked
 
     private void openWolframInfo(String ingredientName) {
         URI uri=null;
