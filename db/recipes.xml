@@ -291,10 +291,10 @@ basmati rice and greens.</preparation>
     <source />
     <ingredients>
       <ingredient>
-        <name />
+        <name>salt</name>
         <measure>2.0</measure>
         <measureUnit>T</measureUnit>
-        <measure_in_gram>59.2</measure_in_gram>
+        <measure_in_gram>35.5</measure_in_gram>
       </ingredient>
     </ingredients>
     <preparation />
