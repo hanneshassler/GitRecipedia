@@ -66,6 +66,9 @@ public class RecipeGUI extends javax.swing.JFrame {
 
         ErrorOptionPane = new javax.swing.JOptionPane();
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        cookbookJPanel2 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        recipejTree = new javax.swing.JTree();
         ingredientPanel = new javax.swing.JPanel();
         nameTextField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -132,9 +135,6 @@ public class RecipeGUI extends javax.swing.JFrame {
         getInfoButton = new javax.swing.JButton();
         ingredientInfoTextField = new javax.swing.JTextField();
         automaticWolframAlphaCheckBox = new javax.swing.JCheckBox();
-        jPanel2 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        recipejTree = new javax.swing.JTree();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         exitMenuItem = new javax.swing.JMenuItem();
@@ -144,6 +144,41 @@ public class RecipeGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        recipejTree.addTreeExpansionListener(new javax.swing.event.TreeExpansionListener() {
+            public void treeCollapsed(javax.swing.event.TreeExpansionEvent evt) {
+                recipejTreeTreeCollapsed(evt);
+            }
+            public void treeExpanded(javax.swing.event.TreeExpansionEvent evt) {
+                recipejTreeTreeExpanded(evt);
+            }
+        });
+        recipejTree.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                recipejTreeMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(recipejTree);
+        //recipejTree.set
+
+        javax.swing.GroupLayout cookbookJPanel2Layout = new javax.swing.GroupLayout(cookbookJPanel2);
+        cookbookJPanel2.setLayout(cookbookJPanel2Layout);
+        cookbookJPanel2Layout.setHorizontalGroup(
+            cookbookJPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cookbookJPanel2Layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(92, Short.MAX_VALUE))
+        );
+        cookbookJPanel2Layout.setVerticalGroup(
+            cookbookJPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(cookbookJPanel2Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(351, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Cookbook", cookbookJPanel2);
 
         ingredientPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -433,7 +468,7 @@ public class RecipeGUI extends javax.swing.JFrame {
                 .addComponent(densityWeightPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(EnergyFatPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(301, Short.MAX_VALUE))
+                .addContainerGap(317, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Ingredient", ingredientPanel);
@@ -758,41 +793,6 @@ public class RecipeGUI extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Recipe", recipejPanel);
 
-        recipejTree.addTreeExpansionListener(new javax.swing.event.TreeExpansionListener() {
-            public void treeCollapsed(javax.swing.event.TreeExpansionEvent evt) {
-                recipejTreeTreeCollapsed(evt);
-            }
-            public void treeExpanded(javax.swing.event.TreeExpansionEvent evt) {
-                recipejTreeTreeExpanded(evt);
-            }
-        });
-        recipejTree.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                recipejTreeMouseClicked(evt);
-            }
-        });
-        jScrollPane2.setViewportView(recipejTree);
-        //recipejTree.set
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(77, 77, 77)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(92, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(351, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Cookbook", jPanel2);
-
         try {
             switch2Unit("g");
             set2Ingredient(ingredientArchive.getFirst());
@@ -838,9 +838,10 @@ public class RecipeGUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jTabbedPane1)
-                .addGap(22, 22, 22))
+                .addContainerGap())
         );
 
         pack();
@@ -1373,6 +1374,7 @@ public class RecipeGUI extends javax.swing.JFrame {
     private javax.swing.JTextField carbTextField;
     private javax.swing.JLabel carb_per_ml_Label;
     private javax.swing.JTextField cookNameTextField;
+    private javax.swing.JPanel cookbookJPanel2;
     private javax.swing.JButton delIngredientButton;
     private javax.swing.JButton deleteButton;
     private javax.swing.JTextField densityTextField;
@@ -1406,7 +1408,6 @@ public class RecipeGUI extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
