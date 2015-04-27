@@ -15,10 +15,11 @@ Jamaikapfeffer,Viergewürz, Allgewürz</alias>
     <name>fenugreek</name>
     <alias>Bockshornklee, Bockshornkleesamen</alias>
     <density>0.75</density>
-    <calSpec>3.2454</calSpec>
+    <calSpec>3.245</calSpec>
     <carbSpec>0.07</carbSpec>
     <fatSpec>0.6</fatSpec>
     <protSpec>0.3</protSpec>
+    <weightPerPiece>11.0</weightPerPiece>
   </ingredient>
   <ingredient>
     <name>Butter</name>
