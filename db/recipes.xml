@@ -296,6 +296,12 @@ basmati rice and greens.</preparation>
         <measureUnit>T</measureUnit>
         <measure_in_gram>35.5</measure_in_gram>
       </ingredient>
+      <ingredient>
+        <name>sugar</name>
+        <measure>1.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>12.6</measure_in_gram>
+      </ingredient>
     </ingredients>
     <preparation />
     <portions>0</portions>
