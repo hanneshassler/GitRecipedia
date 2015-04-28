@@ -1220,10 +1220,10 @@ public class RecipeGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_recipejTreeTreeCollapsed
 
     private void recipejTreeTreeExpanded(javax.swing.event.TreeExpansionEvent evt) {//GEN-FIRST:event_recipejTreeTreeExpanded
-        System.out.println("Tree expanend");
+        System.out.println("Tree expanded");
         DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
-        System.out.println(root.getPath());
+        //System.out.println(root.getPath());
         
         root.setUserObject("Cookbook");
         ((DefaultTreeModel) recipejTree.getModel()).nodeChanged(root);
@@ -1233,7 +1233,7 @@ public class RecipeGUI extends javax.swing.JFrame {
 
     private void recipejTreeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recipejTreeMouseClicked
        
-        System.out.println("mouse clicked; Button="+evt.getButton()+"component="+evt.getComponent());
+        //System.out.println("mouse clicked; Button="+evt.getButton()+"component="+evt.getComponent());
        if (evt.getButton()==3) {
            System.out.println("right Click");
        }
