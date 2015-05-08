@@ -1223,16 +1223,26 @@ public class RecipeGUI extends javax.swing.JFrame {
         System.out.println("Tree expanded");
         DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
-        //System.out.println(root.getPath());
         
-        root.setUserObject("Cookbook");
+        recipejTreeChangeName("Cookbook",  root);        
+        recipejTreeAddNode(model, root);
+        
+    }//GEN-LAST:event_recipejTreeTreeExpanded
+
+    private void recipejTreeChangeName(String newName, DefaultMutableTreeNode root) {
+        root.setUserObject(newName);
         ((DefaultTreeModel) recipejTree.getModel()).nodeChanged(root);
         
+    }
+    
+    private void recipejTreeAddNode(DefaultTreeModel model, DefaultMutableTreeNode root) {
         model.insertNodeInto(new DefaultMutableTreeNode("another_child"), root, root.getChildCount());
         model.insertNodeInto(new DefaultMutableTreeNode("grandchild"), 
                 (DefaultMutableTreeNode)root.getChildAt(3), 0);
-    }//GEN-LAST:event_recipejTreeTreeExpanded
-
+    }
+    
+    
+    
     private void recipejTreeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recipejTreeMouseClicked
        
         //System.out.println("mouse clicked; Button="+evt.getButton()+"component="+evt.getComponent());
