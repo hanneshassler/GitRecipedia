@@ -1228,7 +1228,9 @@ public class RecipeGUI extends javax.swing.JFrame {
         root.setUserObject("Cookbook");
         ((DefaultTreeModel) recipejTree.getModel()).nodeChanged(root);
         
-        //model.insertNodeInto(new DefaultMutableTreeNode("another_child"), root, root.getChildCount());
+        model.insertNodeInto(new DefaultMutableTreeNode("another_child"), root, root.getChildCount());
+        model.insertNodeInto(new DefaultMutableTreeNode("grandchild"), 
+                (DefaultMutableTreeNode)root.getChildAt(3), 0);
     }//GEN-LAST:event_recipejTreeTreeExpanded
 
     private void recipejTreeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recipejTreeMouseClicked
