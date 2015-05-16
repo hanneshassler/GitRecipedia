@@ -161,6 +161,8 @@ public class RecipeGUI extends javax.swing.JFrame {
         jScrollPane2.setViewportView(recipejTree);
         //recipejTree.set
         titleTree("Cookbook");
+        makeTreeEmpty();
+        treeAddNode();
 
         javax.swing.GroupLayout cookbookJPanel2Layout = new javax.swing.GroupLayout(cookbookJPanel2);
         cookbookJPanel2.setLayout(cookbookJPanel2Layout);
@@ -1217,25 +1219,38 @@ public class RecipeGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_openWolframAlphaButtonActionPerformed
 
     private void recipejTreeTreeCollapsed(javax.swing.event.TreeExpansionEvent evt) {//GEN-FIRST:event_recipejTreeTreeCollapsed
-        System.out.println("TreeCollapsed");
+        //System.out.println("TreeCollapsed");
     }//GEN-LAST:event_recipejTreeTreeCollapsed
 
     private void recipejTreeTreeExpanded(javax.swing.event.TreeExpansionEvent evt) {//GEN-FIRST:event_recipejTreeTreeExpanded
         System.out.println("Tree expanded");
         DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
-        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
-        
-        recipejTreeChangeName("Cookbook",  root);        
-        recipejTreeAddNode(model, root);
-        
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();  
+        //recipejTreeAddNode(model, root);
+        //model.removeNodeFromParent(root.getFirstLeaf());
+        //makeTreeEmpty();        
     }//GEN-LAST:event_recipejTreeTreeExpanded
 
+    private void treeAddNode() {
+        DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();  
+        recipejTreeAddNode(model, root);        
+    }
+    private void makeTreeEmpty() {
+        
+        DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();  
+        //recipejTreeAddNode(model, root);
+        while (!root.isLeaf())
+            model.removeNodeFromParent(root.getFirstLeaf());
+        
+    }
     private void titleTree(String treeName) {
         DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();        
-        recipejTreeChangeName(treeName,  root);        
-        recipejTreeAddNode(model, root);
+        recipejTreeChangeName(treeName,  root);  
     }
+    
     private void recipejTreeChangeName(String newName, DefaultMutableTreeNode root) {
         root.setUserObject(newName);
         ((DefaultTreeModel) recipejTree.getModel()).nodeChanged(root);
@@ -1245,7 +1260,7 @@ public class RecipeGUI extends javax.swing.JFrame {
     private void recipejTreeAddNode(DefaultTreeModel model, DefaultMutableTreeNode root) {
         model.insertNodeInto(new DefaultMutableTreeNode("another_child"), root, root.getChildCount());
         model.insertNodeInto(new DefaultMutableTreeNode("grandchild"), 
-                (DefaultMutableTreeNode)root.getChildAt(3), 0);
+                (DefaultMutableTreeNode)root.getChildAt(0), 0);
     }
     
     
