@@ -160,6 +160,7 @@ public class RecipeGUI extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(recipejTree);
         //recipejTree.set
+        titleTree("Cookbook");
 
         javax.swing.GroupLayout cookbookJPanel2Layout = new javax.swing.GroupLayout(cookbookJPanel2);
         cookbookJPanel2.setLayout(cookbookJPanel2Layout);
@@ -1229,6 +1230,12 @@ public class RecipeGUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_recipejTreeTreeExpanded
 
+    private void titleTree(String treeName) {
+        DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();        
+        recipejTreeChangeName(treeName,  root);        
+        recipejTreeAddNode(model, root);
+    }
     private void recipejTreeChangeName(String newName, DefaultMutableTreeNode root) {
         root.setUserObject(newName);
         ((DefaultTreeModel) recipejTree.getModel()).nodeChanged(root);

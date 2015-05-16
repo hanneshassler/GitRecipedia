@@ -138,7 +138,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recipejTreeMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//recipejTree.set"/>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//recipejTree.set&#xa;titleTree(&quot;Cookbook&quot;);"/>
                     <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="RecipeGUI_recipejTree"/>
                   </AuxValues>
                 </Component>
