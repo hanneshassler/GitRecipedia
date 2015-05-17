@@ -26,4 +26,5 @@ public class ExceptionMessage {
     public static String noKnownIngredient="I dont know this ingredient";
     public static String couldnotSave="cannot save to File";
     public static String versionNo="version "+Version.no;
+    public static String contextMenu="contextMenu";
 }

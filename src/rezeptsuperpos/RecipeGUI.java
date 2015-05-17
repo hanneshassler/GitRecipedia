@@ -26,6 +26,8 @@ import java.net.URISyntaxException;
 
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellEditor;
+import javax.swing.JPopupMenu;
+import javax.swing.JMenuItem;
 
 import org.jdom2.Element;
 import org.jdom2.Element;
@@ -49,10 +51,13 @@ public class RecipeGUI extends javax.swing.JFrame {
     Convert convert = new Convert();
     public static int ingredPrecision=4;
     public static int aliasRightmostPos=50;
+    JPopupMenu recipeTreeContextmenu = new JPopupMenu();
     
 	
     public RecipeGUI() {
         initComponents();
+        recipeTreeContextmenu.add ( new JMenuItem ( "Test1" ) );
+        recipeTreeContextmenu.add ( new JMenuItem ( "Test2" ) );
     }
 
     /**
@@ -145,6 +150,11 @@ public class RecipeGUI extends javax.swing.JFrame {
 
         jTabbedPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        recipejTree.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                recipejTreeFocusGained(evt);
+            }
+        });
         recipejTree.addTreeExpansionListener(new javax.swing.event.TreeExpansionListener() {
             public void treeCollapsed(javax.swing.event.TreeExpansionEvent evt) {
                 recipejTreeTreeCollapsed(evt);
@@ -158,11 +168,16 @@ public class RecipeGUI extends javax.swing.JFrame {
                 recipejTreeMouseClicked(evt);
             }
         });
+        recipejTree.addTreeSelectionListener(new javax.swing.event.TreeSelectionListener() {
+            public void valueChanged(javax.swing.event.TreeSelectionEvent evt) {
+                recipejTreeValueChanged(evt);
+            }
+        });
         jScrollPane2.setViewportView(recipejTree);
         //recipejTree.set
         titleTree("Cookbook");
-        makeTreeEmpty();
-        treeAddNode();
+        //makeTreeEmpty();
+        //treeAddNode();
 
         javax.swing.GroupLayout cookbookJPanel2Layout = new javax.swing.GroupLayout(cookbookJPanel2);
         cookbookJPanel2.setLayout(cookbookJPanel2Layout);
@@ -1229,6 +1244,7 @@ public class RecipeGUI extends javax.swing.JFrame {
         //recipejTreeAddNode(model, root);
         //model.removeNodeFromParent(root.getFirstLeaf());
         //makeTreeEmpty();        
+        System.out.println(evt.getPath());
     }//GEN-LAST:event_recipejTreeTreeExpanded
 
     private void treeAddNode() {
@@ -1270,9 +1286,36 @@ public class RecipeGUI extends javax.swing.JFrame {
         //System.out.println("mouse clicked; Button="+evt.getButton()+"component="+evt.getComponent());
        if (evt.getButton()==3) {
            System.out.println("right Click");
+           int row = recipejTree.getClosestRowForLocation(evt.getX(), evt.getY());
+           recipejTree.setSelectionRow(row);           
+           
+           recipeTreeContextmenu.show ( recipejTree, evt.getX(), evt.getY() );
        }
        
     }//GEN-LAST:event_recipejTreeMouseClicked
+
+    private void recipejTreeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_recipejTreeFocusGained
+        System.out.println("Focus gained:"+evt.getComponent().toString());
+        System.out.println("ID="+evt.getID());
+    }//GEN-LAST:event_recipejTreeFocusGained
+
+    private void recipejTreeValueChanged(javax.swing.event.TreeSelectionEvent evt) {//GEN-FIRST:event_recipejTreeValueChanged
+        //Returns the last path element of the selection.
+        //This method is useful only when the selection model allows a single selection.
+        DefaultMutableTreeNode node = (DefaultMutableTreeNode)
+                       this.recipejTree.getLastSelectedPathComponent();
+
+        if (node == null)
+        //Nothing is selected.     
+        return;
+
+            Object nodeInfo = node.getUserObject();
+            if (node.isLeaf()) {        
+                System.out.println("Leaf:"+nodeInfo.toString());        
+            } else {
+                System.out.println("NoLeaf:"+nodeInfo.toString());        
+            }
+    }//GEN-LAST:event_recipejTreeValueChanged
 
     private void openWolframInfo(String ingredientName) {
         URI uri=null;
