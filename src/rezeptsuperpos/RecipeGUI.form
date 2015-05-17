@@ -133,12 +133,14 @@
               <SubComponents>
                 <Component class="javax.swing.JTree" name="recipejTree">
                   <Events>
+                    <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="recipejTreeFocusGained"/>
                     <EventHandler event="treeCollapsed" listener="javax.swing.event.TreeExpansionListener" parameters="javax.swing.event.TreeExpansionEvent" handler="recipejTreeTreeCollapsed"/>
                     <EventHandler event="treeExpanded" listener="javax.swing.event.TreeExpansionListener" parameters="javax.swing.event.TreeExpansionEvent" handler="recipejTreeTreeExpanded"/>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recipejTreeMouseClicked"/>
+                    <EventHandler event="valueChanged" listener="javax.swing.event.TreeSelectionListener" parameters="javax.swing.event.TreeSelectionEvent" handler="recipejTreeValueChanged"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//recipejTree.set&#xa;titleTree(&quot;Cookbook&quot;);&#xa;makeTreeEmpty();&#xa;treeAddNode();"/>
+                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//recipejTree.set&#xa;titleTree(&quot;Cookbook&quot;);&#xa;//makeTreeEmpty();&#xa;//treeAddNode();"/>
                     <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="RecipeGUI_recipejTree"/>
                   </AuxValues>
                 </Component>
