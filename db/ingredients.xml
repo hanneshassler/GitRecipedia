@@ -307,5 +307,35 @@ Jamaikapfeffer,Viergewürz, Allgewürz</alias>
     <density>1.0</density>
     <weightPerPiece>85</weightPerPiece>
   </ingredient>
+  <ingredient>
+    <name>Babyspinat</name>
+    <density>1.0</density>
+    <weightPerPiece>0</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>Balsamessig</name>
+    <density>1.0</density>
+    <weightPerPiece>0</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>Mayonnaise</name>
+    <density>1.0</density>
+    <weightPerPiece>14</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>Kernöl</name>
+    <density>0.9</density>
+    <weightPerPiece>0</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>Dijonsenf</name>
+    <density>1.0</density>
+    <weightPerPiece>0</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>Egg</name>
+    <density>1.0</density>
+    <weightPerPiece>35</weightPerPiece>
+  </ingredient>
 </ingredients>
 
