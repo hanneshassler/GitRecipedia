@@ -1212,17 +1212,16 @@ public class RecipeGUI extends javax.swing.JFrame {
 
     private void recipeIngredientsTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recipeIngredientsTableMouseClicked
        
-       //System.out.println("Table mouse clicked");
+        
        DefaultTableModel dtm = (DefaultTableModel) recipeIngredientsTable.getModel();
        
-       String currValue=dtm.getValueAt(recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn()).toString();
-       //dtm.setValueAt("", recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn());
-       //dtm.setValueAt(currValue, recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn());
-       //System.out.println(currValue);
-       ingredientInfoTextField.setText(currValue);
-       //recipeIngredientsTable.selectAll();
-       //TableCellEditor cellEditor = recipeIngredientsTable.getCellEditor(recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn());
-       //cellEditor.get
+       try {
+        String currValue=dtm.getValueAt(recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn()).toString();
+        ingredientInfoTextField.setText(currValue);
+       } catch (NullPointerException ex) {
+           //Ignore it when into a yet empty cell is clicked           
+       }
+       
     }//GEN-LAST:event_recipeIngredientsTableMouseClicked
 
     private void infoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoMenuItemActionPerformed
