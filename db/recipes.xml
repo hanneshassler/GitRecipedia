@@ -287,30 +287,118 @@ basmati rice and greens.</preparation>
     </ingredients>
   </recipe>
   <recipe>
-    <name>recipe</name>
+    <name>Babyspinatsalat</name>
     <source />
     <ingredients>
       <ingredient>
-        <name>salt</name>
-        <measure>2.0</measure>
-        <measureUnit>T</measureUnit>
-        <measure_in_gram>35.5</measure_in_gram>
+        <name>Babyspinat</name>
+        <measure>100.0</measure>
+        <measureUnit>g</measureUnit>
+        <measure_in_gram>100.0</measure_in_gram>
       </ingredient>
       <ingredient>
-        <name>sugar</name>
+        <name>Balsamessig</name>
+        <measure>2.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>29.6</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>Mayonnaise</name>
+        <measure>3.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>44.4</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>salt</name>
+        <measure>1.0</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>5.9</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>Kernöl</name>
+        <measure>6.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>79.9</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>Dijonsenf</name>
         <measure>1.0</measure>
         <measureUnit>T</measureUnit>
-        <measure_in_gram>12.6</measure_in_gram>
+        <measure_in_gram>14.8</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>Egg</name>
+        <measure>2.0</measure>
+        <measureUnit>pcs</measureUnit>
+        <measure_in_gram>70.0</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>garlic</name>
+        <measure>1.0</measure>
+        <measureUnit>pcs</measureUnit>
+        <measure_in_gram>4.7</measure_in_gram>
       </ingredient>
     </ingredients>
-    <preparation />
-    <portions>0</portions>
-    <cook />
+    <preparation>1. Wash baby spinach carefully. Let it drip dry.
+
+2. Boil 2 eggs hard and cut into small pieces.
+
+3. Cut the garlic and mix well with the rest of the ingredients.
+Pour over salad.</preparation>
+    <portions>2</portions>
+    <cook>Hannes Hassler</cook>
   </recipe>
   <recipe>
-    <name>recipe</name>
+    <name>Babycremespinat</name>
     <source />
-    <ingredients />
+    <ingredients>
+      <ingredient>
+        <name>babyspinach,fresh</name>
+        <measure>200.0</measure>
+        <measureUnit>g</measureUnit>
+        <measure_in_gram>200.0</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>oil</name>
+        <measure>3.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>44.4</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>salt</name>
+        <measure>1.0</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>5.9</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>chicken stock</name>
+        <measure>100.0</measure>
+        <measureUnit>ml</measureUnit>
+        <measure_in_gram>100.0</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>cream</name>
+        <measure>3.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>44.4</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>brown butter</name>
+        <measure>3.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>39.9</measure_in_gram>
+      </ingredient>
+    </ingredients>
+    <preparation>1. Cut baby spinach roughly
+2. Cook spinach with oil and salt
+3. Add chicken stock (or other soup) and cook for several minutes
+4. Once reasonably soft shred spinach with blender and cook a little more.
+5. Add cream and before serving the brown butter.
+
+Cremespinat is often served with boiled and roasted potatoes 
+plus fried egg, a classic in Austria.</preparation>
+    <portions>2</portions>
+    <cook>Hannes Hassler</cook>
   </recipe>
 </recipes>
 

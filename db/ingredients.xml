@@ -305,7 +305,62 @@ Jamaikapfeffer,Viergewürz, Allgewürz</alias>
   <ingredient>
     <name>pumpkin oil</name>
     <density>1.0</density>
-    <weightPerPiece>85</weightPerPiece>
+    <weightPerPiece>85.0</weightPerPiece>
+    <alias>kernöl</alias>
+    <calSpec>0.0</calSpec>
+    <fatSpec>0.0</fatSpec>
+    <protSpec>0.0</protSpec>
+    <carbSpec>0.0</carbSpec>
+  </ingredient>
+  <ingredient>
+    <name>Babyspinat</name>
+    <density>1.0</density>
+    <weightPerPiece>0</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>Balsamessig</name>
+    <density>1.0</density>
+    <weightPerPiece>0</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>Mayonnaise</name>
+    <density>1.0</density>
+    <weightPerPiece>14</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>Kernöl</name>
+    <density>0.9</density>
+    <weightPerPiece>0</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>Dijonsenf</name>
+    <density>1.0</density>
+    <weightPerPiece>0</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>Egg</name>
+    <density>1.0</density>
+    <weightPerPiece>35</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>babyspinach</name>
+    <density>0.19</density>
+    <weightPerPiece>91</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>chicken stock</name>
+    <density>1.0</density>
+    <weightPerPiece>240</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>cream</name>
+    <density>1.0</density>
+    <weightPerPiece>15</weightPerPiece>
+  </ingredient>
+  <ingredient>
+    <name>brown butter</name>
+    <density>0.9</density>
+    <weightPerPiece>0</weightPerPiece>
   </ingredient>
 </ingredients>
 

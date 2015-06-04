@@ -26,6 +26,8 @@ import java.net.URISyntaxException;
 
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellEditor;
+import javax.swing.JPopupMenu;
+import javax.swing.JMenuItem;
 
 import org.jdom2.Element;
 import org.jdom2.Element;
@@ -49,11 +51,30 @@ public class RecipeGUI extends javax.swing.JFrame {
     Convert convert = new Convert();
     public static int ingredPrecision=4;
     public static int aliasRightmostPos=50;
-    
+    JPopupMenu recipeTreeContextmenu = new JPopupMenu();
+    JMenuItem jmenuItemTest1= new JMenuItem ( "Test1" );
+    JMenuItem jmenuItemTest2= new JMenuItem ( "Test2" );
 	
     public RecipeGUI() {
         initComponents();
+        recipeTreeContextmenu.add ( jmenuItemTest1 );
+        recipeTreeContextmenu.add ( jmenuItemTest2 );
+        
+        jmenuItemTest1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmenuItemTest1ActionPerformed(evt);
+            }
+        });
+        
+        jmenuItemTest2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmenuItemTest2ActionPerformed(evt);
+            }
+        });
+        
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -136,15 +157,21 @@ public class RecipeGUI extends javax.swing.JFrame {
         ingredientInfoTextField = new javax.swing.JTextField();
         automaticWolframAlphaCheckBox = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        fileMenu = new javax.swing.JMenu();
         exitMenuItem = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        abountMenu = new javax.swing.JMenu();
         infoMenuItem = new javax.swing.JMenuItem();
+        testMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTabbedPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        recipejTree.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                recipejTreeFocusGained(evt);
+            }
+        });
         recipejTree.addTreeExpansionListener(new javax.swing.event.TreeExpansionListener() {
             public void treeCollapsed(javax.swing.event.TreeExpansionEvent evt) {
                 recipejTreeTreeCollapsed(evt);
@@ -158,8 +185,16 @@ public class RecipeGUI extends javax.swing.JFrame {
                 recipejTreeMouseClicked(evt);
             }
         });
+        recipejTree.addTreeSelectionListener(new javax.swing.event.TreeSelectionListener() {
+            public void valueChanged(javax.swing.event.TreeSelectionEvent evt) {
+                recipejTreeValueChanged(evt);
+            }
+        });
         jScrollPane2.setViewportView(recipejTree);
         //recipejTree.set
+        titleTree("Cookbook");
+        //makeTreeEmpty();
+        //treeAddNode();
 
         javax.swing.GroupLayout cookbookJPanel2Layout = new javax.swing.GroupLayout(cookbookJPanel2);
         cookbookJPanel2.setLayout(cookbookJPanel2Layout);
@@ -730,7 +765,7 @@ public class RecipeGUI extends javax.swing.JFrame {
                                         .addGap(4, 4, 4)
                                         .addComponent(jLabel14)
                                         .addGap(4, 4, 4)
-                                        .addComponent(cookNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(cookNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(recipejPanelLayout.createSequentialGroup()
                                         .addComponent(ingredientScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -784,11 +819,11 @@ public class RecipeGUI extends javax.swing.JFrame {
                         .addComponent(ingredientInfoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(automaticWolframAlphaCheckBox)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(recipejPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Recipe", recipejPanel);
@@ -801,7 +836,7 @@ public class RecipeGUI extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-        jMenu1.setText("File");
+        fileMenu.setText("File");
 
         exitMenuItem.setText("Exit");
         exitMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -809,11 +844,22 @@ public class RecipeGUI extends javax.swing.JFrame {
                 exitMenuItemActionPerformed(evt);
             }
         });
-        jMenu1.add(exitMenuItem);
+        fileMenu.add(exitMenuItem);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(fileMenu);
 
-        jMenu2.setText("About");
+        abountMenu.setText("About");
+        abountMenu.addMenuDragMouseListener(new javax.swing.event.MenuDragMouseListener() {
+            public void menuDragMouseDragged(javax.swing.event.MenuDragMouseEvent evt) {
+                abountMenuMenuDragMouseDragged(evt);
+            }
+            public void menuDragMouseEntered(javax.swing.event.MenuDragMouseEvent evt) {
+            }
+            public void menuDragMouseExited(javax.swing.event.MenuDragMouseEvent evt) {
+            }
+            public void menuDragMouseReleased(javax.swing.event.MenuDragMouseEvent evt) {
+            }
+        });
 
         infoMenuItem.setText("Info");
         infoMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -821,9 +867,17 @@ public class RecipeGUI extends javax.swing.JFrame {
                 infoMenuItemActionPerformed(evt);
             }
         });
-        jMenu2.add(infoMenuItem);
+        abountMenu.add(infoMenuItem);
 
-        jMenuBar1.add(jMenu2);
+        testMenuItem.setText("testMenu");
+        testMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                testMenuItemActionPerformed(evt);
+            }
+        });
+        abountMenu.add(testMenuItem);
+
+        jMenuBar1.add(abountMenu);
 
         setJMenuBar(jMenuBar1);
 
@@ -1194,17 +1248,16 @@ public class RecipeGUI extends javax.swing.JFrame {
 
     private void recipeIngredientsTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recipeIngredientsTableMouseClicked
        
-       //System.out.println("Table mouse clicked");
+        
        DefaultTableModel dtm = (DefaultTableModel) recipeIngredientsTable.getModel();
        
-       String currValue=dtm.getValueAt(recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn()).toString();
-       //dtm.setValueAt("", recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn());
-       //dtm.setValueAt(currValue, recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn());
-       //System.out.println(currValue);
-       ingredientInfoTextField.setText(currValue);
-       //recipeIngredientsTable.selectAll();
-       //TableCellEditor cellEditor = recipeIngredientsTable.getCellEditor(recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn());
-       //cellEditor.get
+       try {
+        String currValue=dtm.getValueAt(recipeIngredientsTable.getSelectedRow(), recipeIngredientsTable.getSelectedColumn()).toString();
+        ingredientInfoTextField.setText(currValue);
+       } catch (NullPointerException ex) {
+           //Ignore it when into a yet empty cell is clicked           
+       }
+       
     }//GEN-LAST:event_recipeIngredientsTableMouseClicked
 
     private void infoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoMenuItemActionPerformed
@@ -1216,30 +1269,106 @@ public class RecipeGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_openWolframAlphaButtonActionPerformed
 
     private void recipejTreeTreeCollapsed(javax.swing.event.TreeExpansionEvent evt) {//GEN-FIRST:event_recipejTreeTreeCollapsed
-        System.out.println("TreeCollapsed");
+        //System.out.println("TreeCollapsed");
     }//GEN-LAST:event_recipejTreeTreeCollapsed
 
     private void recipejTreeTreeExpanded(javax.swing.event.TreeExpansionEvent evt) {//GEN-FIRST:event_recipejTreeTreeExpanded
         System.out.println("Tree expanded");
         DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
-        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
-        //System.out.println(root.getPath());
-        
-        root.setUserObject("Cookbook");
-        ((DefaultTreeModel) recipejTree.getModel()).nodeChanged(root);
-        
-        //model.insertNodeInto(new DefaultMutableTreeNode("another_child"), root, root.getChildCount());
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();  
+        //recipejTreeAddNode(model, root);
+        //model.removeNodeFromParent(root.getFirstLeaf());
+        //makeTreeEmpty();        
+        System.out.println(evt.getPath());
     }//GEN-LAST:event_recipejTreeTreeExpanded
 
+    private void treeAddNode() {
+        DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();  
+        recipejTreeAddNode(model, root);        
+    }
+    private void makeTreeEmpty() {
+        
+        DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();  
+        //recipejTreeAddNode(model, root);
+        while (!root.isLeaf())
+            model.removeNodeFromParent(root.getFirstLeaf());
+        
+    }
+    private void titleTree(String treeName) {
+        DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();        
+        recipejTreeChangeName(treeName,  root);  
+    }
+    
+    private void recipejTreeChangeName(String newName, DefaultMutableTreeNode root) {
+        root.setUserObject(newName);
+        ((DefaultTreeModel) recipejTree.getModel()).nodeChanged(root);
+        
+    }
+    
+    private void recipejTreeAddNode(DefaultTreeModel model, DefaultMutableTreeNode root) {
+        model.insertNodeInto(new DefaultMutableTreeNode("another_child"), root, root.getChildCount());
+        model.insertNodeInto(new DefaultMutableTreeNode("grandchild"), 
+                (DefaultMutableTreeNode)root.getChildAt(0), 0);
+    }
+    
+    
+    
     private void recipejTreeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recipejTreeMouseClicked
        
         //System.out.println("mouse clicked; Button="+evt.getButton()+"component="+evt.getComponent());
        if (evt.getButton()==3) {
-           System.out.println("right Click");
+           //System.out.println("right Click");
+           int row = recipejTree.getClosestRowForLocation(evt.getX(), evt.getY());
+           recipejTree.setSelectionRow(row);                      
+           recipeTreeContextmenu.show ( recipejTree, evt.getX(), evt.getY() );
        }
        
     }//GEN-LAST:event_recipejTreeMouseClicked
 
+    private void recipejTreeFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_recipejTreeFocusGained
+        /*
+        System.out.println("Focus gained:"+evt.getComponent().toString());
+        System.out.println("ID="+evt.getID());
+        */
+    }//GEN-LAST:event_recipejTreeFocusGained
+
+    private void recipejTreeValueChanged(javax.swing.event.TreeSelectionEvent evt) {//GEN-FIRST:event_recipejTreeValueChanged
+        //Returns the last path element of the selection.
+        //This method is useful only when the selection model allows a single selection.
+        DefaultMutableTreeNode node = (DefaultMutableTreeNode)
+                       this.recipejTree.getLastSelectedPathComponent();
+
+        if (node == null)
+        //Nothing is selected.     
+        return;
+
+            Object nodeInfo = node.getUserObject();
+            if (node.isLeaf()) {        
+                System.out.println("Leaf:"+nodeInfo.toString());        
+            } else {
+                System.out.println("NoLeaf:"+nodeInfo.toString());        
+            }
+    }//GEN-LAST:event_recipejTreeValueChanged
+
+    private void abountMenuMenuDragMouseDragged(javax.swing.event.MenuDragMouseEvent evt) {//GEN-FIRST:event_abountMenuMenuDragMouseDragged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_abountMenuMenuDragMouseDragged
+
+    private void testMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testMenuItemActionPerformed
+       System.out.println("testMenuItemClicked");
+    }//GEN-LAST:event_testMenuItemActionPerformed
+
+    private void jmenuItemTest1ActionPerformed(java.awt.event.ActionEvent evt) {
+        System.out.println("Test1");
+    }
+    
+    private void jmenuItemTest2ActionPerformed(java.awt.event.ActionEvent evt) {
+        System.out.println("Test2");
+    }
+    
     private void openWolframInfo(String ingredientName) {
         URI uri=null;
 		try {
@@ -1367,6 +1496,7 @@ public class RecipeGUI extends javax.swing.JFrame {
     private javax.swing.JPanel ButtonPanel;
     private javax.swing.JPanel EnergyFatPanel;
     private javax.swing.JOptionPane ErrorOptionPane;
+    private javax.swing.JMenu abountMenu;
     private javax.swing.JTextArea aliasTextArea;
     private javax.swing.JCheckBox automaticWolframAlphaCheckBox;
     private javax.swing.JTextField calTextField;
@@ -1382,6 +1512,7 @@ public class RecipeGUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JTextField fatTextField;
     private javax.swing.JLabel fatper_ml_Label;
+    private javax.swing.JMenu fileMenu;
     private javax.swing.JLabel gPer_ml_Label;
     private javax.swing.JButton getInfoButton;
     private javax.swing.JMenuItem infoMenuItem;
@@ -1404,8 +1535,6 @@ public class RecipeGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
@@ -1438,6 +1567,7 @@ public class RecipeGUI extends javax.swing.JFrame {
     private javax.swing.JPanel recipejPanel;
     private javax.swing.JTree recipejTree;
     private javax.swing.JButton searchIngredientFromNameButton;
+    private javax.swing.JMenuItem testMenuItem;
     private javax.swing.JComboBox volumeUnitComboBox;
     private javax.swing.JTextField weightPerPieceTextField;
     // End of variables declaration//GEN-END:variables
