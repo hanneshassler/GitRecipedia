@@ -127,68 +127,68 @@ Mix potato slices with kohlrabi salad. Adapt seasoning with
 salt, butter and (Styrian) pumpkin oil.</preparation>
     <portions>2</portions>
     <cook>Hannes Hassler</cook>
-     <ingredients>
--      <ingredient>
--        <name>potato</name>
--        <measure>5.0</measure>
--        <measureUnit>stk</measureUnit>
--        <measure_in_gram>865.0</measure_in_gram>
--      </ingredient>
--      <ingredient>
--        <name>Kohlrabi</name>
--        <measure>1.0</measure>
--        <measureUnit>stk</measureUnit>
--        <measure_in_gram>135.0</measure_in_gram>
--      </ingredient>
--      <ingredient>
--        <name>sesame oil</name>
--        <measure>2.0</measure>
--        <measureUnit>T</measureUnit>
--        <measure_in_gram>27.2</measure_in_gram>
--      </ingredient>
--      <ingredient>
--        <name>soy sauce</name>
--        <measure>2.0</measure>
--        <measureUnit>T</measureUnit>
--        <measure_in_gram>35.5</measure_in_gram>
--      </ingredient>
--      <ingredient>
--        <name>fish sauce</name>
--        <measure>1.0</measure>
--        <measureUnit>t</measureUnit>
--        <measure_in_gram>5.9</measure_in_gram>
--      </ingredient>
--      <ingredient>
--        <name>mustard seed</name>
--        <measure>2.0</measure>
--        <measureUnit>t</measureUnit>
--        <measure_in_gram>9.9</measure_in_gram>
--      </ingredient>
--      <ingredient>
--        <name>salt</name>
--        <measure>1.0</measure>
--        <measureUnit>T</measureUnit>
--        <measure_in_gram>17.7</measure_in_gram>
--      </ingredient>
--      <ingredient>
--        <name>butter</name>
--        <measure>1.0</measure>
--        <measureUnit>T</measureUnit>
--        <measure_in_gram>14.2</measure_in_gram>
--      </ingredient>
--      <ingredient>
--        <name>apple vinegar</name>
--        <measure>1.0</measure>
--        <measureUnit>T</measureUnit>
--        <measure_in_gram>16.3</measure_in_gram>
--      </ingredient>
--      <ingredient>
--        <name>pumpkin oil</name>
--        <measure>3.0</measure>
--        <measureUnit>T</measureUnit>
--        <measure_in_gram>44.4</measure_in_gram>
--      </ingredient>
--    </ingredients>
+    <ingredients>
+      <ingredient>
+        <name>potato</name>
+        <measure>5.0</measure>
+        <measureUnit>stk</measureUnit>
+        <measure_in_gram>865.0</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>Kohlrabi</name>
+        <measure>1.0</measure>
+        <measureUnit>stk</measureUnit>
+        <measure_in_gram>135.0</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>sesame oil</name>
+        <measure>2.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>27.2</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>soy sauce</name>
+        <measure>2.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>35.5</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>fish sauce</name>
+        <measure>1.0</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>5.9</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>mustard seed</name>
+        <measure>2.0</measure>
+        <measureUnit>t</measureUnit>
+        <measure_in_gram>9.9</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>salt</name>
+        <measure>1.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>17.7</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>butter</name>
+        <measure>1.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>14.2</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>apple vinegar</name>
+        <measure>1.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>16.3</measure_in_gram>
+      </ingredient>
+      <ingredient>
+        <name>pumpkin oil</name>
+        <measure>3.0</measure>
+        <measureUnit>T</measureUnit>
+        <measure_in_gram>44.4</measure_in_gram>
+      </ingredient>
+    </ingredients>
   </recipe>
   <recipe>
     <name>Merlin's Lentil Dhal</name>
@@ -399,11 +399,6 @@ Cremespinat is often served with boiled and roasted potatoes
 plus fried egg, a classic in Austria.</preparation>
     <portions>2</portions>
     <cook>Hannes Hassler</cook>
-  </recipe>
-  <recipe>
-    <name>recipe</name>
-    <source />
-    <ingredients />
   </recipe>
 </recipes>
 
