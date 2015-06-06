@@ -11,5 +11,5 @@ package rezeptsuperpos;
  * @author Hannes Hassler
  */
 public class Version {
-    public static final String no="0.58";
+    public static final String no="0.60";
 }
