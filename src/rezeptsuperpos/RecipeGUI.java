@@ -90,6 +90,8 @@ public class RecipeGUI extends javax.swing.JFrame {
         cookbookJPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         recipejTree = new javax.swing.JTree();
+        addNodeButton = new javax.swing.JButton();
+        nodeTextField = new javax.swing.JTextField();
         ingredientPanel = new javax.swing.JPanel();
         nameTextField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -196,21 +198,39 @@ public class RecipeGUI extends javax.swing.JFrame {
         //makeTreeEmpty();
         //treeAddNode();
 
+        addNodeButton.setText("addNode");
+        addNodeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addNodeButtonActionPerformed(evt);
+            }
+        });
+
+        nodeTextField.setText("Node");
+
         javax.swing.GroupLayout cookbookJPanel2Layout = new javax.swing.GroupLayout(cookbookJPanel2);
         cookbookJPanel2.setLayout(cookbookJPanel2Layout);
         cookbookJPanel2Layout.setHorizontalGroup(
             cookbookJPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cookbookJPanel2Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(cookbookJPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(cookbookJPanel2Layout.createSequentialGroup()
+                        .addComponent(addNodeButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(92, Short.MAX_VALUE))
         );
         cookbookJPanel2Layout.setVerticalGroup(
             cookbookJPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cookbookJPanel2Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(351, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(cookbookJPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addNodeButton)
+                    .addComponent(nodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(477, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Cookbook", cookbookJPanel2);
@@ -1282,10 +1302,10 @@ public class RecipeGUI extends javax.swing.JFrame {
         System.out.println(evt.getPath());
     }//GEN-LAST:event_recipejTreeTreeExpanded
 
-    private void treeAddNode() {
+    private void addNode2Tree(String nodeName) {
         DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();  
-        recipejTreeAddNode(model, root);        
+        recipejTreeAddNode(model, root, nodeName);        
     }
     private void makeTreeEmpty() {
         
@@ -1308,10 +1328,10 @@ public class RecipeGUI extends javax.swing.JFrame {
         
     }
     
-    private void recipejTreeAddNode(DefaultTreeModel model, DefaultMutableTreeNode root) {
-        model.insertNodeInto(new DefaultMutableTreeNode("another_child"), root, root.getChildCount());
-        model.insertNodeInto(new DefaultMutableTreeNode("grandchild"), 
-                (DefaultMutableTreeNode)root.getChildAt(0), 0);
+    private void recipejTreeAddNode(DefaultTreeModel model, DefaultMutableTreeNode root, String nodeName) {
+        model.insertNodeInto(new DefaultMutableTreeNode(nodeName), root, root.getChildCount());
+        /*model.insertNodeInto(new DefaultMutableTreeNode("grandchild"), 
+                (DefaultMutableTreeNode)root.getChildAt(0), 0);*/
     }
     
     
@@ -1360,6 +1380,11 @@ public class RecipeGUI extends javax.swing.JFrame {
     private void testMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testMenuItemActionPerformed
        System.out.println("testMenuItemClicked");
     }//GEN-LAST:event_testMenuItemActionPerformed
+
+    private void addNodeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addNodeButtonActionPerformed
+        System.out.println("add node:"+this.nodeTextField.getText());
+        addNode2Tree(this.nodeTextField.getText());
+    }//GEN-LAST:event_addNodeButtonActionPerformed
 
     private void jmenuItemTest1ActionPerformed(java.awt.event.ActionEvent evt) {
         System.out.println("Test1");
@@ -1497,6 +1522,7 @@ public class RecipeGUI extends javax.swing.JFrame {
     private javax.swing.JPanel EnergyFatPanel;
     private javax.swing.JOptionPane ErrorOptionPane;
     private javax.swing.JMenu abountMenu;
+    private javax.swing.JButton addNodeButton;
     private javax.swing.JTextArea aliasTextArea;
     private javax.swing.JCheckBox automaticWolframAlphaCheckBox;
     private javax.swing.JTextField calTextField;
@@ -1547,6 +1573,7 @@ public class RecipeGUI extends javax.swing.JFrame {
     private javax.swing.JTextField nameTextField;
     private javax.swing.JButton newIngredientButton;
     private javax.swing.JButton nextButton;
+    private javax.swing.JTextField nodeTextField;
     private javax.swing.JButton openWolframAlphaButton;
     private javax.swing.JButton prevButton;
     private javax.swing.JTextField protTextField;
