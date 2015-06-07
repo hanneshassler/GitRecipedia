@@ -1450,15 +1450,48 @@ public class RecipeGUI extends javax.swing.JFrame {
         makeTreeEmpty();        
         DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();
-        
-        for (int nodeIdx=0;nodeIdx<10;nodeIdx++) {
-            model.insertNodeInto(new DefaultMutableTreeNode("nodeName"+nodeIdx), 
-                    (DefaultMutableTreeNode) root, nodeIdx);
-        }
-        
+                
+        int recipeIdx=0;
+        for (Element recipeElement: this.recipeArchive.documentArr) {
+            //addRecipe2Tree(recipeElement,root,recipeIdx++);   
+            addElement2Node(recipeElement,root,recipeIdx++);
+        }        
         
     }//GEN-LAST:event_fillRecipesButtonActionPerformed
 
+    private void addRecipe2Tree(Element recipeElement,DefaultMutableTreeNode node, int indexAfterNode) {
+        DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
+        Recipe recipe = new Recipe(recipeElement);
+        DefaultMutableTreeNode recipeRootNode = new DefaultMutableTreeNode(recipe.name);
+        model.insertNodeInto(recipeRootNode, node, indexAfterNode);        
+        DefaultMutableTreeNode ingredientRootNode=new DefaultMutableTreeNode("ingredients");
+        DefaultMutableTreeNode authorRootNode=new DefaultMutableTreeNode("author");
+        model.insertNodeInto(authorRootNode, recipeRootNode, 0);
+        model.insertNodeInto(ingredientRootNode, recipeRootNode, 1); 
+    }
+    
+    private void addElement2Node(Element element, DefaultMutableTreeNode node, int indexAfterNode) {
+        DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
+        element.getChildText("name");
+        DefaultMutableTreeNode elementRootNode=null;
+        if (getElementName(element)!=null) 
+            elementRootNode = new DefaultMutableTreeNode(getElementName(element));  
+        else 
+            elementRootNode = new DefaultMutableTreeNode(element.getName());
+        model.insertNodeInto(elementRootNode, node, indexAfterNode);
+        int childIdx=0;
+        for (Element child : element.getChildren()) 
+            addElement2Node(child, elementRootNode,childIdx++);
+    }
+    
+    private String getElementName(Element element) {
+        String retVal=null;
+        try {
+            retVal=element.getChildText("name");
+        } catch (Exception ex) {/*ignore*/}
+        return retVal;
+    }
+    
     private void addContextNode(String nodeName) {
         DefaultTreeModel model = (DefaultTreeModel) recipejTree.getModel();
         DefaultMutableTreeNode node = (DefaultMutableTreeNode)
